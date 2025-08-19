@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: url('https://thumbs.dreamstime.com/b/festive-backdrop-childrens-birthday-party-featuring-bright-balloons-confetti-gifts-festive-backdrop-childrens-323980885.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+label, input, select, button {
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+  font-size: 16px;
+}
+
+button {
+  background: #ff4081;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #e91e63;
+}
+
+#resumen {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  display: none;
+}

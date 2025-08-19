@@ -133,3 +133,54 @@ Ahora toda la interacción se realiza en pantalla, sin usar `prompt` ni `alert` 
   - Almacenamiento local (`localStorage`).
 
 ---
+
+## 🚀 Mejoras recientes
+
+Se agregó el uso de un archivo JSON como base de datos simulada, consumido mediante fetch(), para cargar dinámicamente las opciones de servicios disponibles.
+De esta forma, la app no depende de datos estáticos en el código, sino que los obtiene de un recurso externo, simulando la lógica de un backend real.
+También se integró SweetAlert, reemplazando los alert() tradicionales por modales mucho más atractivos y personalizables.
+Esto no solo aporta una mejor estética, sino que también permite mayor claridad en los mensajes de validación y confirmación.
+
+## 🎉 ¿Qué hace la aplicación?
+
+1. Muestra un formulario en pantalla para iniciar la cotización.  
+2. Pide:
+   - Nombre del cumpleañero/a.
+   - Cantidad de invitados adultos.
+   - Cantidad de invitados menores.
+   - Correo electrónico de contacto.
+   - Tipo de servicio (traído desde un **JSON remoto simulado**).  
+3. Genera dinámicamente los inputs para ingresar los nombres de todos los invitados.  
+4. Al confirmar, guarda los datos en **localStorage** y muestra un **resumen en pantalla**.  
+5. Incluye la opción de **reiniciar** la cotización y comenzar de nuevo.  
+
+---
+
+## 📂 Estructura del proyecto
+
+- **`index.html`** → estructura base de la página.  
+- **`style.css`** → estilos visuales y de diseño.  
+- **`cotizador.js`** → lógica principal en JavaScript.  
+- **`servicios.json`** → archivo JSON local que simula la base de datos de servicios.  
+
+---
+
+## ⚙️ Lógica de la aplicación
+
+1. **Formulario inicial:**  
+   - Se completan los datos básicos.  
+   - Se seleccionan los servicios disponibles (opciones cargadas dinámicamente desde `servicios.json` mediante `fetch`).
+
+2. **Confirmación de datos:**  
+   - Al presionar **Confirmar**, se valida que no falte información.  
+   - Los datos se almacenan en **localStorage** para que persistan incluso si el usuario recarga la página.  
+
+3. **Resumen:**  
+   - Se muestra en pantalla toda la información cargada (cumpleañero/a, invitados, email, servicios elegidos).  
+   - Se incluye un mensaje final:  
+     > *"A la brevedad nos estaremos comunicando con usted para un mejor asesoramiento."*  
+
+4. **Reinicio de la app:**  
+   - Botón **Volver a Cotizar** → borra la información de `localStorage` y reinicia el flujo.  
+
+---

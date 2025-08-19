@@ -1,15 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
-    <title>Cotizador De Fiestas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cotizador de Eventos</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script defer src="js/cotizador.js"></script>
 </head>
 
 <body>
+  <h1>Bienvenido, hace tu cotización con nosotros 🎉</h1>
+
+  <form id="formCotizacion">
+    <label for="cumpleanero">Nombre del cumpleañero:</label>
+    <input type="text" id="cumpleanero" required />
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" required />
+
+    <label for="invitadosAdultos">Cantidad de invitados adultos:</label>
+    <input type="number" id="invitadosAdultos" required min="0" />
+
+    <label for="invitadosMenores">Cantidad de invitados menores:</label>
+    <input type="number" id="invitadosMenores" required min="0" />
+
+    <label for="paquete">Elegí tu paquete:</label>
+    <select id="paquete" required></select>
+
+    <button type="submit">Cotizar</button>
+  </form>
+
+  <div id="resumen"></div>
+
 
 </body>
 

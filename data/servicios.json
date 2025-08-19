@@ -1,0 +1,7 @@
+[
+  { "id": 1, "nombre": "Salón Básico", "precio": 500000 },
+  { "id": 2, "nombre": "Salón Premium", "precio": 900000 },
+  { "id": 3, "nombre": "Salón Básico + Show", "precio": 800000 },
+  { "id": 3, "nombre": "Salón Premium + Show", "precio": 1200000},
+  { "id": 4, "nombre": "Catering Completo mayores", "precio": 70000 }
+]
